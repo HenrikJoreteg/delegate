@@ -1,16 +1,16 @@
 
 # delegate
 
-  Low-level event delegation component.
+  Low-level event delegation component. Forked from component/delegate for use with browserify.
 
 ## Installation
 
-    $ component install component/delegate
+    $ npm install delegate-events
 
 ## Example
 
 ```js
-var delegate = require('delegate');
+var delegate = require('delegate-events');
 var ul = document.querySelector('ul');
 var n = 0;
 

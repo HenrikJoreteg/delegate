@@ -1,7 +1,7 @@
 {
-  "name": "component-delegate",
+  "name": "delegate-events",
   "description": "Event delegation component",
-  "version": "0.2.1",
+  "version": "1.0.0",
   "keywords": [
     "event",
     "events",
@@ -9,16 +9,14 @@
     "delegation"
   ],
   "dependencies": {
-    "discore-closest": "*",
-    "component-event": "*"
+    "component-event": "*",
+    "closest": "*"
   },
-  "component": {
-    "scripts": {
-      "delegate/index.js": "index.js"
-    }
+  "browser": {
+    "event": "component-event"
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/component/delegate.git"
+    "url": "git://github.com/HenrikJoreteg/delegate.git"
   }
 }
