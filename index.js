@@ -19,7 +19,13 @@ var closest = require('closest')
  * @api public
  */
 
+// Some events don't bubble, so we want to bind to the capture phase instead
+// when delegating.
+var forceCaptureEvents = ['focus', 'blur'];
+
 exports.bind = function(el, selector, type, fn, capture){
+  if (forceCaptureEvents.indexOf(type) !== -1) capture = true;
+
   return event.bind(el, type, function(e){
     var target = e.target || e.srcElement;
     e.delegateTarget = closest(target, selector, true, el);
@@ -38,5 +44,7 @@ exports.bind = function(el, selector, type, fn, capture){
  */
 
 exports.unbind = function(el, type, fn, capture){
+  if (forceCaptureEvents.indexOf(type) !== -1) capture = true;
+
   event.unbind(el, type, fn, capture);
 };

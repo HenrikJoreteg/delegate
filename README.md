@@ -34,6 +34,12 @@ var fn = delegate.bind(ul, 'li a', 'click', function(e){
 
   Unbind.
 
+## Tests
+
+* Run `npm test`.
+* Open `test/index.html` in a browser.
+* Open the js console and verify that interacting with the elements works as they say they should.
+
 ## License
 
   MIT
