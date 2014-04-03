@@ -18,5 +18,11 @@
   "repository": {
     "type": "git",
     "url": "git://github.com/HenrikJoreteg/delegate.git"
+  },
+  "devDependencies": {
+    "browserify": "^3.33.0"
+  },
+  "scripts": {
+    "test": "browserify test/test.js > test/test.bundle.js && echo 'Now open test/index.html in a browser to test'"
   }
 }
